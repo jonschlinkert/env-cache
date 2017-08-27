@@ -2,27 +2,26 @@
 
 require('mocha');
 var assert = require('assert');
-var env = require('./');
+var EnvCache = require('./');
 
 describe('env-cache', function() {
   it('should export a function', function() {
-    assert.equal(typeof env, 'function');
+    assert.equal(typeof EnvCache, 'function');
   });
 
-  it('should export an object', function() {
-    assert(env);
-    assert.equal(typeof env, 'object');
+  it('should set and get a value', function() {
+    var env = new EnvCache('FOO');
+    env.set('foo', 'bar');
+    assert.equal(env.get('foo'), 'bar');
   });
 
-  it('should throw an error when invalid args are passed', function(cb) {
-    try {
-      env();
-      cb(new Error('expected an error'));
-    } catch (err) {
-      assert(err);
-      assert.equal(err.message, 'expected first argument to be a string');
-      assert.equal(err.message, 'expected callback to be a function');
-      cb();
-    }
+  it('should throw an error when invalid args are passed', function() {
+    assert.throws(function() {
+      EnvCache();
+    });
+
+    assert.throws(function() {
+      new EnvCache();
+    });
   });
 });
