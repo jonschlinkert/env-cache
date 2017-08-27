@@ -22,6 +22,7 @@ var debug = require('debug')('env-cache');
  */
 
 function EnvCache(namespace) {
+  debug('initialized from', __filename);
   if (!(this instanceof EnvCache)) {
     return new EnvCache(namespace);
   }
