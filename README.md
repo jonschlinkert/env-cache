@@ -45,7 +45,7 @@ Create an instance of `EnvCache` with the given `namespace`. The namespace is au
 var env = new EnvCache('foo');
 ```
 
-### [.set](index.js#L48)
+### [.set](index.js#L49)
 
 Set a value on your `process.env` namespace.
 
@@ -62,7 +62,7 @@ console.log(process.env.FOO_DEV);
 //=> true
 ```
 
-### [.get](index.js#L69)
+### [.get](index.js#L70)
 
 Get a value from your `process.env` namespace.
 
@@ -78,7 +78,7 @@ console.log(env.get('dev'));
 //=> true
 ```
 
-### [.enabled](index.js#L89)
+### [.enabled](index.js#L90)
 
 Returns the `true` boolean if the value of `key` is the string "true".
 
@@ -94,7 +94,7 @@ console.log(env.enabled('dev'));
 //=> true
 ```
 
-### [.disabled](index.js#L110)
+### [.disabled](index.js#L111)
 
 Returns the `false` boolean if the value of `key` is the string "false".
 
