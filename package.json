@@ -1,7 +1,7 @@
 {
   "name": "env-cache",
   "description": "Get and set values on process.env using a namespace.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/jonschlinkert/env-cache",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/env-cache",
